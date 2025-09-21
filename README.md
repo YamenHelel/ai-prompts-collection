@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Prompts Collection
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -197,3 +198,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ for the AI community**
 
 *This repository is maintained by Yamen Helel and the open-source community.*
+=======
+# ai-prompts-collection
+>>>>>>> 59ebe65e2f69f1a11cdc99d2a255dbd89d9bffed
