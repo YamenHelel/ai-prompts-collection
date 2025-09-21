@@ -1,0 +1,96 @@
+{
+  "title": "Prompt Frontmatter",
+  "type": "object",
+  "required": ["id", "title", "language", "tags", "last_updated"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique identifier for the prompt using kebab-case"
+    },
+    "title": {
+      "type": "string",
+      "description": "Descriptive title of the prompt"
+    },
+    "language": {
+      "type": "string",
+      "enum": ["en", "ar", "fr"],
+      "description": "Language code for the prompt content"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Category or domain the prompt belongs to (e.g., statistics, surveys, productivity)"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "Array of relevant tags for categorization and search"
+    },
+    "audience": {
+      "type": "string",
+      "description": "Target audience for the prompt (e.g., analysts, developers, researchers)"
+    },
+    "model_tips": {
+      "type": "object",
+      "properties": {
+        "prefers_chain_of_thought": {
+          "type": "boolean",
+          "description": "Whether the prompt works better with chain-of-thought reasoning"
+        },
+        "temperature": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Recommended temperature setting for the model"
+        },
+        "max_tokens": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Recommended maximum tokens for the response"
+        },
+        "system_message": {
+          "type": "string",
+          "description": "Additional system message recommendations"
+        }
+      },
+      "additionalProperties": true,
+      "description": "Tips and recommendations for using this prompt with AI models"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the prompt was last updated (YYYY-MM-DD format)"
+    },
+    "attribution": {
+      "type": "string",
+      "description": "Attribution and license information for the prompt"
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of related prompt IDs"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version number of the prompt"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"],
+      "description": "Difficulty level of the prompt"
+    },
+    "use_cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of use cases for the prompt"
+    }
+  },
+  "additionalProperties": true
+}
