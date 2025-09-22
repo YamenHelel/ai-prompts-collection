@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AI Prompts Collection
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,6 +8,10 @@ A professional, curated collection of AI prompts with structured metadata, valid
 
 ## 🚀 Quick Start
 
+### Option 1: Use the Web Interface (Recommended)
+Visit the live web interface at: **[Your GitHub Pages URL]**
+
+### Option 2: Local Development
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/ai-prompts-collection.git
@@ -17,6 +20,14 @@ cd ai-prompts-collection
 # Install dependencies
 npm install
 
+# Build and view web interface
+npm run dev
+
+# Open web/index.html in your browser
+```
+
+### Option 3: Command Line
+```bash
 # Validate all prompts
 npm run validate
 ```
@@ -38,11 +49,17 @@ ai-prompts-collection/
 │   │   └── prompt_request.md
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── workflows/
-│       └── validate-prompts.yml        # CI/CD validation
+│       ├── validate-prompts.yml        # CI/CD validation
+│       └── deploy-pages.yml           # GitHub Pages deployment
 ├── schema/
 │   └── prompt.schema.json             # JSON schema for validation
 ├── tools/
-│   └── validate.mjs                   # Validation script
+│   ├── validate.mjs                   # Validation script
+│   └── build-index.mjs               # Web interface index builder
+├── web/                               # Web interface for browsing prompts
+│   ├── index.html                    # Main web interface
+│   ├── prompts-index.json           # Generated prompts index
+│   └── README.md                     # Web interface documentation
 ├── prompts/                           # English prompts
 │   ├── creativity/                    # Nano Banana-inspired creative prompts
 │   │   ├── nano-banana-brainstorm.md
@@ -65,7 +82,15 @@ ai-prompts-collection/
 
 ## 🎯 How to Use
 
-### 1. Browse Prompts
+### 🌐 Web Interface Features
+- **🔍 Smart Search**: Find prompts by title, tags, content, or keywords
+- **🏷️ Advanced Filtering**: Filter by category, difficulty, language, and more
+- **📱 Responsive Design**: Works perfectly on desktop, tablet, and mobile
+- **📋 One-Click Copy**: Copy prompts directly to your clipboard
+- **🎨 Beautiful UI**: Modern, clean interface with smooth animations
+- **⚡ Fast & Lightweight**: Quick loading and smooth performance
+
+### 📂 Browse Prompts
 Explore prompts by category:
 - **Statistics**: Data analysis and statistical computing prompts
 - **Surveys**: Research and data collection prompts
@@ -198,6 +223,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ for the AI community**
 
 *This repository is maintained by Yamen Helel and the open-source community.*
-=======
-# ai-prompts-collection
->>>>>>> 59ebe65e2f69f1a11cdc99d2a255dbd89d9bffed
